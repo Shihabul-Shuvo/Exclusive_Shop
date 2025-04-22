@@ -8,33 +8,9 @@ import Footer from "../components/Footer"
 
 const validation = yup.object().shape({
   email: yup
-    .string()
-    .required("Email is required")
-    .matches(
-      /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-      "Invalid email address"
-    )
-    .test('valid-domain', 'Email domain must be complete', function(value) {
-      if (!value) return true; // Skip if empty (already handled by required)
-      
-      // Check that domain has at least one dot and at least 2 chars after the last dot
-      const parts = value.split('@');
-      if (parts.length !== 2) return false;
-      
-      const domain = parts[1];
-      // Domain must have at least one dot
-      if (!domain.includes('.')) return false;
-      
-      // Domain must have at least 2 characters after the last dot
-      const extension = domain.split('.').pop();
-      if (!extension || extension.length < 2) return false;
-      
-      // Domain part before the last dot should not be empty
-      const domainName = domain.split('.').slice(0, -1).join('.');
-      if (!domainName || domainName.length < 1) return false;
-      
-      return true;
-    }),
+  .string()
+  .required("Email is required")
+  .email("Invalid email address"),
   username: yup
     .string()
     .required("Username is required"),

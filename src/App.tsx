@@ -21,6 +21,9 @@ import OrderConfirmation from "./pages/OrderConfirmation";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
 import FAQ from "./pages/FAQ";
+import Reviews from "./pages/Reviews";
+import Orders from "./pages/Orders";
+import Cancellations from "./pages/Cancellations";
 
 const queryClient = new QueryClient();
 
@@ -86,6 +89,10 @@ const App = () => {
                 }
               />
               <Route path="/account" element={<><ScrollToTop /><Account /></>} />
+              <Route path="/reviews" element={<><ScrollToTop /><Reviews /></>} />
+              <Route path="/orders" element={<><ScrollToTop /><Orders /></>} />
+              <Route path="/cancellations" element={<><ScrollToTop /><Cancellations /></>} />
+              
               <Route
                 path="/wishlist"
                 element={
