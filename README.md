@@ -59,7 +59,6 @@ This is a modern e-commerce web application built with **React**, **TypeScript**
 ## 📱 Mobile Responsiveness
 
 - Built with Tailwind CSS breakpoints  
-- **Sheet component** used for mobile navigation  
 - Responsive product grid layouts  
 - Touch-friendly elements and interactions
 
@@ -68,7 +67,7 @@ This is a modern e-commerce web application built with **React**, **TypeScript**
 ## ⚠️ Error Handling
 
 - API errors caught using `try-catch` blocks  
-- User feedback shown via toast notifications  
+- User feedback shown via notifications  
 - Loading states and fallback UIs included for better UX
 
 ---
